@@ -26,3 +26,7 @@ header中的图片：显示为圆形半透明，尺寸按容器缩放
 当悬浮在card：card添加阴影
 当悬浮在card：图片不再透明，且添加渐变效果
 当悬浮在按钮式超链接：背景色纯红
+
+作业截图
+
+![image-20201126111709160](https://gitee.com/wenbinai/picture-bed-1/raw/master/imgs/20201126111709.png)
