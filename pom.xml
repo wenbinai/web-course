@@ -11,6 +11,7 @@
     <modules>
         <module>web-experiment</module>
         <module>web-homework</module>
+        <module>web-example</module>
     </modules>
 
 

@@ -6,15 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="web-experiment" />
+        <module name="web-experiment (1)" />
         <module name="homework02" />
         <module name="homework01" />
-      </profile>
-      <profile name="Annotation profile for web-course" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="web-experiment (1)" />
+        <module name="web-example" />
+        <module name="experiment03" />
+        <module name="experiment02" />
       </profile>
     </annotationProcessing>
   </component>
