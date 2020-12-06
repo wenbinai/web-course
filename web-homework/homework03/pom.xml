@@ -3,20 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>web-course</artifactId>
+        <artifactId>web-homework</artifactId>
         <groupId>edu.nefu</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>web-homework</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>homework01</module>
-        <module>homework02</module>
-        <module>homework03</module>
-        <module>homework04</module>
-    </modules>
+    <artifactId>homework03</artifactId>
 
 
 </project>

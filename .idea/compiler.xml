@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="web-experiment (1)" />
+        <module name="homework04" />
+        <module name="homework03" />
         <module name="homework02" />
         <module name="homework01" />
         <module name="web-example" />
