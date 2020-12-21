@@ -12,6 +12,7 @@
         <module name="homework02" />
         <module name="homework01" />
         <module name="web-example" />
+        <module name="experiment04" />
         <module name="experiment03" />
         <module name="experiment02" />
       </profile>

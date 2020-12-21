@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实验五</title>
+</head>
+<body>
+<h1>注册</h1>
+<label>
+    <input type="checkbox" id="legal">我已阅读相关说明并遵守相关法律</label>
+<form id="register">
+    <div>
+        用户名:
+        <input type="text" name="username">
+        <br> 未来意向：
+        <label><input type="radio" name="purp" value="1">Java工程师</label>
+        <label><input type="radio" name="purp" value="2">测试工程师</label>
+        <label><input type="radio" name="purp" value="3">前端工程师</label>
+        <!-- 添加隐藏域 -->
+        <input type="hidden" name="purpose">
+        <br>
+        <br> 请从以下课程中选择2项最喜欢的课程
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" name="courses">Web开发技术
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="courses">软件项目管理
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="courses">数据库原理
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="courses">系统分析与设计
+                </label>
+            </li>
+        </ul>
+        地址：
+        <ul id="ul_address">
+        </ul>
+        <input name="address">
+        <button type="button" id="button_address">添加地址</button>
+        <br>
+    </div>
+    <button type="submit">提交</button>
+</form>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        let registerForm = $("#register :input").prop("disabled", true);
+        // 用户名长度校验标识
+        let userNameValid = false;
+        //课程数量校验标识
+        let coursesValid = false;
+        // 触发同意协议事件
+        $("#purpose").click(function () {
+            // 改变输入框状态
+            let dis = !$(this).prop("checked");
+            registerForm.not($("button:submit")).prop("disabled", dis);
+        })
+
+        $("input[name=username]").change(function () {
+            if ($(this).val().trim().length < 6) {
+                alert("用户名长度必须大于等于6")
+                userNameValid = false
+            } else {
+                userNameValid = true
+            }
+        })
+    })
+</script>
+</body>
+</html>

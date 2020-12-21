@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .modal {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background: rgba(0, 0, 21, 0.3);
+            display: none;
+        }
+
+        .modal .modal-dialog {
+            width: 400px;
+            margin: auto;
+            background: white;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .modal .modal-header {
+            padding: 8px;
+            border-bottom: 1px solid #c3c3c3;
+        }
+
+        .modal-content {
+            padding: 8px;
+            border-bottom: 1px solid #c3c3c3;
+        }
+
+        .modal-footer {
+            display: flex;
+        }
+
+        .modal button.close {
+            padding: 8px;
+            border-bottom: 1px solid #c3c3c3;
+            color: white;
+            background: #c3c3c3;
+            margin-left: auto;
+        }
+
+        .modal button.save {
+            padding: 8px;
+            border-bottom: 1px solid #c3c3c3;
+            color: white;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="modal" id="modal1">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h3>Modal Title</h3>
+        </div>
+        <div class="modal-content">
+            <span>点击成功!</span>
+        </div>
+        <div class="modal-footer">
+            <button class="close">Close</button>
+            <button class="save">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <p>生而为人，哪有尽善尽美，哪有天衣无缝，每个人都有缺点不足，因为金无足赤，每个人都有私心杂念，因为人无完人，所以互相理解点，彼此包容点，人生才能走的顺畅。</p>
+    <button data-target="modal1">点击激活模态框</button>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        let modal;
+        $("[data-target]").click(function () {
+            let id = $(this).data("target");
+            modal = $(`#${id}`);
+            modal.fadeIn();
+            modal.children(".modal-dialog").animate({"top": "20px"}, 300);
+        });
+
+        $(".modal, .modal button.close").click(function () {
+            modal.fadeOut();
+            modal.children(".modal-dialog").animate({"top": "0"}, 300);
+        });
+        $(".modal, .modal button.save").click(function () {
+            modal.fadeOut();
+            modal.children(".modal-dialog").animate({"top": "0"}, 300);
+        });
+
+        $(".modal-dialog").click(false);
+
+    })
+</script>
+</body>
+</html>
